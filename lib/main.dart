@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:mydemo/thankyou.dart';
 
-import 'MyCustomForm.dart';
-import 'YourData.dart';
+import 'Yourform.dart';
+import 'myform.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -23,14 +25,7 @@ class NavigationExample extends StatefulWidget {
 
 class _NavigationExampleState extends State<NavigationExample> {
   int currentPageIndex = 0;
-  final screens = [
-    MyCustomForm(),
-    YourData(name: 'manoj', email: 'manoj', password: 'manoj',
 
-
-    ),
-
-  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,18 +44,23 @@ class _NavigationExampleState extends State<NavigationExample> {
               selectedIcon: Icon(Icons.home),
             ),
             NavigationDestination(
-              icon: Icon(Icons.school_outlined),
-              label: 'School',
-              selectedIcon: Icon(Icons.school),
+              icon: Icon(Icons.mail_outline),
+              label: 'Sign-In',
+              selectedIcon: Icon(Icons.mail),
             ),
             NavigationDestination(
-              icon: Icon(Icons.business_outlined),
-              label: 'Business',
-              selectedIcon: Icon(Icons.business),
+              icon: Icon(Icons.newspaper_outlined),
+              label: 'Message',
+              selectedIcon: Icon(Icons.newspaper),
             ),
           ],
         ),
-    body: screens[currentPageIndex],
+    body: <Widget>[
+      Mydata(),
+      Yourform(),
+      Thankyou(),
+
+    ][currentPageIndex],
 
     );
   }

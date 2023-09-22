@@ -1,22 +1,16 @@
 import 'package:flutter/material.dart';
 
-import 'YourData.dart';
+import 'Yourform.dart';
 
 
-void main() {
-  runApp(MaterialApp(
-    home: MyApp(),
-  ));
-}
 
-class MyApp extends StatelessWidget {
+
+class Mydata extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('sign up'),
-      ),
+
       body: MyCustomForm(),
     );
   }
@@ -25,10 +19,10 @@ class MyApp extends StatelessWidget {
 class MyCustomForm extends StatefulWidget {
 
   @override
-  State<MyCustomForm> createState() => MyCustomFormState();
+  State<MyCustomForm> createState() => _MyCustomFormState();
 }
 
-class MyCustomFormState extends State<MyCustomForm> {
+class _MyCustomFormState extends State<MyCustomForm> {
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
@@ -91,12 +85,10 @@ class MyCustomFormState extends State<MyCustomForm> {
                 ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(content: Text('Signing in...')));
               }
-              String name = _nameController.text;
-              String email = _emailController.text;
-              String password = _passwordController.text;
+
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) =>
-                  YourData(name: name, email: email, password: password)));
+                  context, MaterialPageRoute(builder: (context) =>Yourform()
+                  ));
             },
             child: const Text('Sign up'),
           ),
