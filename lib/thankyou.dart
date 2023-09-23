@@ -11,23 +11,23 @@ class Thankyou extends StatelessWidget {
         body: Column(
           children: [
             Container(
-              margin: EdgeInsets.all(20),
+              margin: const EdgeInsets.all(20),
               width: double.infinity,
               alignment: Alignment.center,
               padding: EdgeInsets.all(10),
-              child: Text(
-                "THANK YOU", style: TextStyle(fontSize: 75),),
+              child: const Text(
+                "THANK YOU !", style: TextStyle(fontSize: 75),),
 
             ),
 
 
-            Padding(padding: EdgeInsets.only(bottom: 50)),
-            Text("Code is Under maintenance",style: TextStyle(fontSize: 60),),
+            const Padding(padding: EdgeInsets.only(bottom: 50)),
+            const Text("Code is Under maintenance",style: TextStyle(fontSize: 60),),
                 ]
         ),
 
         floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.home),
+          child: const Icon(Icons.home),
             onPressed: (){
           Navigator.push(
               context, MaterialPageRoute(builder: (context) =>MyApp()

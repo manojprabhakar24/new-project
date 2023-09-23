@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'Yourform.dart';
 
 
@@ -50,7 +49,7 @@ class _MyCustomFormState extends State<MyCustomForm> {
               ),
             ),
           ),
-          Padding(padding: EdgeInsets.all(20),
+          Padding(padding: const EdgeInsets.all(20),
             child: TextFormField(
               controller: _emailController,
               validator: (value) {

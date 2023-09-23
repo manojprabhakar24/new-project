@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mydemo/thankyou.dart';
-
 import 'Yourform.dart';
 import 'myform.dart';
 
@@ -37,7 +36,7 @@ class _NavigationExampleState extends State<NavigationExample> {
           },
           selectedIndex: currentPageIndex,
           backgroundColor: Colors.red[800],
-          destinations: [
+          destinations: const [
             NavigationDestination(
               icon: Icon(Icons.home_outlined),
               label: 'Home',
